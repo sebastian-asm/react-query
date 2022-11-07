@@ -1,5 +1,3 @@
-# React Query - Issues
+# React con TanStack Query (React Query)
 
-1. Clonar repositorio
-2. Ejecutar ``` yarn install``` o ```npm install```
-3. Abrir el URL del proyecto
+Realizando pruebas con la librería [TanStack Query](https://tanstack.com/query/v4) para el manejo eficiente de estados en las peticiones HTTP y caché.
