@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import useLabels from '../hooks/useLabels';
+import { useLabels } from '../hooks';
 import LoadingIcon from './shared/LoadingIcon';
 
 interface Props {

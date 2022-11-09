@@ -1,13 +1,17 @@
 import { githubApi } from '../../api/githubApi';
-import { Label } from '../interfaces/label';
+import { Label } from '../interfaces';
 import { useQuery } from '@tanstack/react-query';
 
 const getLabels = async (): Promise<Label[]> => {
-  const { data } = await githubApi.get<Label[]>('/labels');
+  const { data } = await githubApi.get<Label[]>('/labels', {
+    headers: {
+      Authorization: null,
+    },
+  });
   return data;
 };
 
-export default function useLabels() {
+export const useLabels = () => {
   const labelsQuery = useQuery(['labels'], getLabels, {
     // indicar que no haga fetch cuando se vuelve hacer focus en la ventana
     // refetchOnWindowFocus: false,
@@ -37,4 +41,4 @@ export default function useLabels() {
   });
 
   return labelsQuery;
-}
+};
